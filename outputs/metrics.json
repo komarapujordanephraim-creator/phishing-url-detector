@@ -1,0 +1,61 @@
+{
+  "source": "Public phishing-website feature table (see README for link and limits)",
+  "rows_raw": 10000,
+  "rows_after_cleaning": 9866,
+  "unique_domains": 3550,
+  "train_rows": 7302,
+  "test_rows": 2564,
+  "test_phishing_share": 0.484,
+  "majority_class_baseline_accuracy": 0.5156,
+  "test_legit_domains": 70,
+  "train_legit_domains": 173,
+  "validation": "GroupShuffleSplit + GroupKFold(5) on Domain (no domain in both train and test)",
+  "best_model_by_cv_auc": "Gradient Boosting",
+  "url_text_features_only_for_best_model": {
+    "cv_roc_auc_mean": 0.8293,
+    "cv_roc_auc_std": 0.059,
+    "test_accuracy": 0.7929,
+    "test_balanced_accuracy": 0.7882,
+    "test_specificity_legit_correct": 0.9395,
+    "test_precision": 0.9082,
+    "test_recall": 0.6369,
+    "test_f1": 0.7487,
+    "test_roc_auc": 0.8519
+  },
+  "results": {
+    "Logistic Regression": {
+      "cv_roc_auc_mean": 0.8199,
+      "cv_roc_auc_std": 0.0221,
+      "test_accuracy": 0.7941,
+      "test_balanced_accuracy": 0.7889,
+      "test_specificity_legit_correct": 0.9554,
+      "test_precision": 0.9291,
+      "test_recall": 0.6224,
+      "test_f1": 0.7454,
+      "test_roc_auc": 0.8647
+    },
+    "Random Forest": {
+      "cv_roc_auc_mean": 0.822,
+      "cv_roc_auc_std": 0.0435,
+      "test_accuracy": 0.7664,
+      "test_balanced_accuracy": 0.7659,
+      "test_specificity_legit_correct": 0.7799,
+      "test_precision": 0.7624,
+      "test_recall": 0.752,
+      "test_f1": 0.7572,
+      "test_roc_auc": 0.8583
+    },
+    "Gradient Boosting": {
+      "cv_roc_auc_mean": 0.8294,
+      "cv_roc_auc_std": 0.0474,
+      "test_accuracy": 0.7761,
+      "test_balanced_accuracy": 0.7748,
+      "test_specificity_legit_correct": 0.8162,
+      "test_precision": 0.7894,
+      "test_recall": 0.7335,
+      "test_f1": 0.7604,
+      "test_roc_auc": 0.8562
+    },
+    "x": 0
+  }
+}
